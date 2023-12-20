@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": {
+      "value": "${AZURE_ENV_NAME}"
+    },
+    "location": {
+      "value": "${AZURE_LOCATION}"
+    },
+    "principalId": {
+      "value": "${AZURE_PRINCIPAL_ID}"
+    },
+    "resourceGroupName": {
+      "value": "${AZURE_RESOURCE_GROUP_NAME}"
+    },
+    "networkIsolation": {
+      "value": "${AZURE_NETWORK_ISOLATION}"
+    },
+    "vmUserInitialPassword": {
+      "value": "$(secretOrRandomPassword ${AZURE_VM_KV_NAME} vmUserInitialPassword)"
+    },
+    "vmUserName": {
+      "value": "gptrag"
+    },
+    "chatGptModelName": {
+      "value": "gpt-35-turbo-16k"
+    },
+    "chatGptModelVersion": {
+      "value": "0613"
+    },
+    "openaiApiVersion": {
+      "value": "2023-08-01-preview"
+    },
+    "orchestratorMessagesLanguage": {
+      "value": "es"
+    },
+    "searchAnalyzerName": {
+      "value": "es.microsoft"
+    },
+    "searchServiceLanguage": {
+      "value": "es"
+    },
+    "speechRecognitionLanguage": {
+      "value": "es-ES"
+    },
+    "speechSynthesisLanguage": {
+      "value": "es-ES"
+    },
+    "speechSynthesisVoiceName": {
+      "value": "es-MX-BeatrizNeural"
+    },
+    "azureDbAccountName": {
+      "value": "${AZURE_DB_ACCOUNT_NAME}"
+    },
+    "azureDbDatabaseName": {
+      "value": "${AZURE_DB_DATABASE_NAME}"
+    },
+    "azureKeyVaultName": {
+      "value": "${AZURE_KEY_VAULT_NAME}"
+    },
+    "azureStorageAccountName": {
+      "value": "${AZURE_STORAGE_ACCOUNT_NAME}"
+    },
+    "azureCognitiveServiceName": {
+      "value": "${AZURE_COGNITIVE_SERVICE_NAME}"
+    },
+    "azureAppServicePlanName": {
+      "value": "${AZURE_APP_SERVICE_PLAN_NAME}"
+    },
+    "azureAppInsightsName": {
+      "value": "${AZURE_APP_INSIGHTS_NAME}"
+    },
+    "azureAppServiceName": {
+      "value": "${AZURE_APP_SERVICE_NAME}"
+    },
+    "azureOrchestratorFunctionAppName": {
+      "value": "${AZURE_ORCHESTRATOR_FUNCTION_APP_NAME}"
+    },
+    "azureDataIngestionFunctionAppName": {
+      "value": "${AZURE_DATA_INGESTION_FUNCTION_APP_NAME}"
+    },
+    "azureSearchServiceName": {
+      "value": "${AZURE_SEARCH_SERVICE_NAME}"
+    },
+    "azureOpenAIServiceName": {
+      "value": "${AZURE_OPEN_AI_SERVICE_NAME}"
+    },
+    "azureVnetName": {
+      "value": "${AZURE_VNET_NAME}"
+    },
+    "deploymentTags":{
+      "value": {}
+    }
+  }
+}
